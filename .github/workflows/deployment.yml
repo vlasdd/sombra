@@ -1,10 +1,20 @@
 name: Node.js CI
 
+# on:
+#     push:
+#         branches: [main, develop]
+#     pull_request:
+#         branches: [main, develop]
+
 on:
-    push:
-        branches: [main, develop]
     pull_request:
-        branches: [main, develop]
+      types:
+        - opened
+        - reopened
+        - synchronize
+      branches: 
+        - main
+        - develop
 
 jobs:
     build:
@@ -12,7 +22,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [14.15.x]
+                node-version: [21.2.0]
 
         steps:
             - uses: actions/checkout@v2
