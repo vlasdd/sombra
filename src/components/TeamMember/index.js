@@ -10,7 +10,7 @@ const TeamMember = ({ name, surname, position, photoUrl, color }) => {
     const handleCardClick = () => {
         setIsFullscreen(!isFullscreen);
     };
-    const cardClassName = `worker-info border p-3 bg-gray-100  m-2${isFullscreen ? ' fullscreen' : ''}`;
+    const cardClassName = `worker-info border p-3 bg-red-100  m-2${isFullscreen ? ' fullscreen' : ''}`;
 
     return (
         <div className={cardClassName} onClick={handleCardClick}>
