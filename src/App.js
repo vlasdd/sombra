@@ -1,6 +1,7 @@
-import VladImage from './images/vladProfileImage.png'
+import VladImage from "./images/vladProfileImage.png";
+import MykolaImage from "./images/MykolaProfileImage.jpg";
 
-import './index.css';
+import "./index.css";
 import TeamMember from "./components/TeamMember";
 
 function App() {
@@ -14,6 +15,13 @@ function App() {
           position="Full-stack developer"
           photoUrl={VladImage}
           color="red"
+        />
+        <TeamMember
+          name="Mykola"
+          surname="Balii"
+          position="Frontend developer"
+          photoUrl={MykolaImage}
+          color="magenta"
         />
       </div>
     </div>
